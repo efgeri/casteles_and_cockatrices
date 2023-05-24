@@ -1,7 +1,5 @@
 package Character.PC;
 
-import Inventory.Treasure;
-
 import javax.tools.Tool;
 import java.util.ArrayList;
 

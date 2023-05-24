@@ -1,12 +1,10 @@
 package Character.PC;
 
-import Inventory.Spell;
-import Inventory.Treasure;
-import NPC.Familiar;
 import Character.IAttack;
+import Inventory.Spell;
+import NPC.Familiar;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Wizard extends PC implements IAttack {
     private Familiar familiar;

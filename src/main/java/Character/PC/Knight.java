@@ -1,11 +1,8 @@
 package Character.PC;
 
-import Inventory.Armor;
-import Inventory.Treasure;
-import Inventory.Weapon;
 import Character.IAttack;
-
-import java.util.ArrayList;
+import Inventory.Armor;
+import Inventory.Weapon;
 
 public class Knight extends PC implements IAttack{
     private Weapon weapon;

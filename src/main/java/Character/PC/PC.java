@@ -1,9 +1,9 @@
 package Character.PC;
 
+import Character.Characters;
 import Inventory.Treasure;
 
 import java.util.ArrayList;
-import Character.Characters;
 
 public abstract class PC extends Characters {
     private ArrayList<Treasure> treasures;
