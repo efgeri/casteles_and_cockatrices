@@ -21,7 +21,7 @@ public class KnightTest {
         weapon1 = new Weapon("Dagger", 10);
         armor = new Armor("Plate", 8);
         armor1 = new Armor("Leather", 6);
-        knight = new Knight(50, 5, "Johnny the Defender", weapon);
+        knight = new Knight(50, 5, "Johnny the Defender", weapon, 50);
     }
 
     @Test

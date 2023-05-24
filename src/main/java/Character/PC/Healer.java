@@ -1,27 +1,34 @@
 package Character.PC;
+import Character.Characters;
 
-import javax.tools.Tool;
+import Behaviour.Healable;
+import Inventory.MedPack;
+
 import java.util.ArrayList;
 
 public class Healer extends PC{
-    private ArrayList<Tool> tools;
-    private Tool selectedTools;
+    private ArrayList<MedPack> medPacks;
+    private MedPack selectedMedPack;
 
-    public Healer(int HP, int defence, String name, ArrayList<Tool> tools, Tool selectedTools) {
-        super(HP, defence, name);
-        this.tools = tools;
-        this.selectedTools = selectedTools;
+    public Healer(int HP, int defence, String name, int maxHP) {
+        super(HP, defence, name, maxHP);
+        this.medPacks = new ArrayList<>();
     }
 
-    public Tool getSelectedTools() {
-        return selectedTools;
+    public MedPack getSelectedMedPacks() {
+        return selectedMedPack;
     }
 
-    public void setSelectedTools(Tool selectedTools) {
-        this.selectedTools = selectedTools;
+    public void setSelectedMedPacks(MedPack selectedMedPack) {
+        this.selectedMedPack = selectedMedPack;
     }
 
-    public void heal(){
+    public void craftMedPack(MedPack medPack){
+        this.medPacks.add(medPack);
+    }
 
+    public void heal(Healable target){
+        Characters character = (Characters) target;
+        character.setHP(character.getHP() + this.selectedMedPack.getHealValue());
     }
 }

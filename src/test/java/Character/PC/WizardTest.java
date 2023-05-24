@@ -19,14 +19,14 @@ public class WizardTest {
 
     @Before
     public void before() {
-        turtle = new Familiar(10, 15, "Winslow");
+        turtle = new Familiar(10, 15, "Winslow", 10);
         fireball = new Spell("Fireball", 15);
         magicMissile = new Spell("Magic Missile", 10);
-        wizard1 = new Wizard(20, 0, "Tim", turtle);
+        wizard1 = new Wizard(20, 0, "Tim", turtle, 20);
         wizard1.learnSpell(magicMissile);
         wizard1.setSelectedSpell(magicMissile);
         weapon = new Weapon("Axe", 20);
-        knight = new Knight(50, 5, "Johnny the Defender", weapon);
+        knight = new Knight(50, 5, "Johnny the Defender", weapon, 50);
 
     }
 

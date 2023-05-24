@@ -1,10 +1,14 @@
 package Inventory;
 
 public class MedPack extends Inventory{
-    private int heal;
+    private int healValue;
 
-    public MedPack(String name, int heal) {
+    public MedPack(String name, int healValue) {
         super(name);
-        this.heal = heal;
+        this.healValue = healValue;
+    }
+
+    public int getHealValue() {
+        return healValue;
     }
 }

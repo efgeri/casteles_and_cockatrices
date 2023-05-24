@@ -1,6 +1,6 @@
 package Character.PC;
 
-import Character.IAttack;
+import Behaviour.IAttack;
 import Character.Characters;
 import Inventory.Spell;
 import NPC.Familiar;
@@ -12,19 +12,16 @@ public class Wizard extends PC implements IAttack {
     private ArrayList<Spell> spells;
     private Spell selectedSpell;
 
-    public Wizard (int HP, int defence, String name, Familiar familiar) {
-        super(HP, defence, name);
+    public Wizard (int HP, int defence, String name, Familiar familiar, int maxHP) {
+        super(HP, defence, name, maxHP);
         this.familiar = familiar;
         this.spells = new ArrayList<>();
     }
 
     public void attack(Characters target){
-        int damage = this.castSpell() - target.getDefence();
-        if (damage > 1) {
-            target.takeDamage(damage);
-        } else {
-            target.takeDamage(1);
-        }
+        int damage = this.castSpell();
+        target.takeDamage(damage);
+
     }
 
     public ArrayList<Spell> getSpells() {

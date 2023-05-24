@@ -1,6 +1,6 @@
 package Character.PC;
 
-import Character.IAttack;
+import Behaviour.IAttack;
 import Inventory.Armor;
 import Inventory.Weapon;
 import Character.Characters;
@@ -9,8 +9,8 @@ public class Knight extends PC implements IAttack{
     private Weapon weapon;
     private Armor armor;
 
-    public Knight(int HP, int defence, String name, Weapon weapon) {
-        super (HP, defence, name);
+    public Knight(int HP, int defence, String name, Weapon weapon, int maxHP) {
+        super (HP, defence, name, maxHP);
         this.weapon = weapon;
     }
 
