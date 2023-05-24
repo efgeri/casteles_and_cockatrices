@@ -1,4 +1,7 @@
+package Character.PC;
+
 import Character.PC.Knight;
+import Character.Characters;
 import Inventory.Armor;
 import Inventory.Weapon;
 import org.junit.Before;
@@ -25,6 +28,23 @@ public class KnightTest {
     public void canEquipArmor(){
         knight.equipArmor(armor1);
         assertEquals(11, knight.getDefence());
+    }
+
+    @Test
+    public void canEquipWeapon() {
+        assertEquals("Axe", knight.getWeapon().getName());
+        knight.equipWeapon(weapon1);
+        assertEquals("Dagger", knight.getWeapon().getName());
+    }
+
+    @Test
+    public void canAttack() {
+        knight.equipArmor(armor);
+        knight.attack(knight);
+        assertEquals(43, knight.getHP());
+        knight.equipWeapon(weapon1);
+        knight.attack(knight);
+        assertEquals(42, knight.getHP());
     }
 
 }

@@ -7,4 +7,8 @@ public class Spell extends Inventory{
         super(name);
         this.damage = damage;
     }
+
+    public int getDamage() {
+        return this.damage;
+    }
 }

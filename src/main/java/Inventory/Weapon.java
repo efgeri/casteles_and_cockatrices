@@ -8,5 +8,7 @@ public class Weapon extends Inventory {
         this.damage = damage;
     }
 
-
+    public int getDamage() {
+        return this.damage;
+    }
 }

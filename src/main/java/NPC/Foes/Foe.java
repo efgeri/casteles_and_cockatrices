@@ -8,7 +8,7 @@ public class Foe extends Characters implements IAttack{
         this.attack = attack;
     }
 
-    public void attack(Character target){
+    public void attack(Characters target){
 
     }
 }

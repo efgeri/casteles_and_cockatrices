@@ -6,4 +6,8 @@ public abstract class Inventory {
     public Inventory(String name) {
         this.name = name;
     }
+
+    public String getName() {
+        return this.name;
+    }
 }
